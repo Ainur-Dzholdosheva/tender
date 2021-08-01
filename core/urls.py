@@ -10,6 +10,8 @@ router.register(r'buyers', views.BuyerViewSet)
 
 router.register(r'sellers', views.SellerViewSet)
 
+router.register(r'redflags', views.RedFlagViewSet)
+
 urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
