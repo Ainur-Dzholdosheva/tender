@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Tender, Buyer
+from .models import Tender, Buyer, Seller
 
 class TenderSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -10,4 +10,9 @@ class TenderSerializer(serializers.HyperlinkedModelSerializer):
 class BuyerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model=Buyer
+        fields='__all__'
+
+class SellerSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model=Seller
         fields='__all__'
